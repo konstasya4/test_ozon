@@ -15,11 +15,12 @@ body {
 }
 
 .percent_circle {
-  
+
   max-width: 200px;
   max-height: 200px;
   transform: rotate(-90deg);
 }
+
 .container-circle {
   width: 100%;
   height: auto;
@@ -81,6 +82,8 @@ body {
   position: relative;
   width: 12vw;
   height: 4vh;
+  max-width: 60px;
+  max-height: 25px;
   background-color: #dcdcdc;
   border-radius: 15px;
   margin-right: 7vw;
@@ -92,19 +95,21 @@ body {
   position: absolute;
   top: 2px;
   left: 2px;
-  width: calc(4vh - 4px); 
-  height: calc(4vh - 4px); 
+  max-width: 20px;
+    max-height: 20px;
+  width: calc(4vh - 4px);
+  height: calc(4vh - 4px);
   background-color: #fff;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
-.progress_checkbox:checked + .progress_switch {
+.progress_checkbox:checked+.progress_switch {
   background-color: #005cff;
 }
 
-.progress_checkbox:checked + .progress_switch::before {
-  transform: translateX(calc(12vw - 4vh)); /* Сдвиг до правой стороны с учётом размеров */
+.progress_checkbox:checked+.progress_switch::before {
+  transform: translateX(calc(12vw - 4vh));
 }
 
 .progress_name {
@@ -159,6 +164,8 @@ body {
     border-color: black;
     width: 6vw;
     height: 7vh;
+    max-width: 40px;
+    max-height: 25px;
     padding: 2px 5px;
     margin-right: 7vw;
     font-family: "grotesk";
@@ -174,6 +181,8 @@ body {
   .progress_switch {
     position: relative;
     width: 8.5vw;
+    max-height: 25px;
+    max-width: 50px;
     height: 9vh;
     background-color: #dcdcdc;
     border-radius: 15px;
@@ -186,18 +195,20 @@ body {
     position: absolute;
     top: 2px;
     left: 2px;
-    width: calc(9vh - 4px); /* Высота минус 4px для отступов */
+    max-width: 20px;
+    max-height: 20px;
+    width: calc(9vh - 4px);
     height: calc(9vh - 4px);
     background-color: #fff;
     border-radius: 50%;
     transition: transform 0.3s ease;
   }
 
-  .progress_checkbox:checked + .progress_switch {
+  .progress_checkbox:checked+.progress_switch {
     background-color: #005cff;
   }
 
-  .progress_checkbox:checked + .progress_switch::before {
-    transform: translateX(calc(8.5vw - 9vh)); /* Корректный сдвиг вправо */
+  .progress_checkbox:checked+.progress_switch::before {
+    transform: translateX(calc(8.5vw - 9vh));
   }
 }
